@@ -203,6 +203,7 @@
     <Content Include="Scripts\bootstrap.esm.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="VeritabaniScript\mvcStokScript.sql" />
     <Content Include="Web\.gitignore" />
     <Content Include="Web\dist\401.html" />
     <Content Include="Web\dist\404.html" />
