@@ -1,0 +1,32 @@
+﻿@model List<MVCStok.Models.Entity.Kategoriler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    var siraNo = 0;
+}
+<br />
+<h4>Kategoriler Listesi</h4>
+<br />
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Kategori Id</th>
+        <th>Kategori Adı</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    <tbody>
+        @foreach (var kategori in Model)
+        {
+            siraNo++;
+            <tr>
+                <td>@siraNo</td>
+                <td>@kategori.KategoriAd</td>
+                <td><a href="/Kategori/KategoriSil/@kategori.KategoriId" class="btn btn-danger"><i class="fas fa-trash"></i></a></td>
+                <td><a href="/Kategori/KategoriGuncelle/@kategori.KategoriId" class="btn btn-warning"><i class="fas fa-user-edit"></i></a></td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+<a href="/Kategori/KategoriGetir/" class="btn btn-primary">Yeni Kategori Ekle</a>

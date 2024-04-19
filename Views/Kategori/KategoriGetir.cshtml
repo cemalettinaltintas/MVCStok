@@ -1,0 +1,17 @@
+﻿@model MVCStok.Models.Entity.Kategoriler
+@{
+    ViewBag.Title = "KategoriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Kategori Ekle</h4>
+
+<form method="post" class="form-group" action="/Kategori/KategoriEkle/">
+    <div>
+        @Html.LabelFor(x => x.KategoriId, "Kategori Ad")
+        @Html.TextBoxFor(x => x.KategoriAd, new { @class = "form-control" })
+    </div>
+    <div class="mt-4">
+        <button class="btn btn-info">Kategori Ekle</button>
+    </div>
+</form>

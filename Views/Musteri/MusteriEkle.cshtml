@@ -1,0 +1,18 @@
+﻿@model MVCStok.Models.Entity.Musteriler
+@{
+    ViewBag.Title = "MusteriEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Yeni Müşteri</h4>
+<form method="post">
+    @Html.LabelFor(x => x.Ad, "Müşteri Adı")
+    @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+    <br />
+
+    @Html.LabelFor(x => x.Soyad, "Müşteri Soyadı")
+    @Html.TextBoxFor(x => x.Soyad, new { @class = "form-control" })
+    <br />
+
+    <button class="btn btn-info">Kaydet</button>
+</form>

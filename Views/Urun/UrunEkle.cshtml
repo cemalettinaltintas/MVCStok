@@ -1,0 +1,31 @@
+﻿@model MVCStok.Models.Entity.Urunler
+@{
+    ViewBag.Title = "UrunEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Ürün Ekle</h4>
+<p>
+    @ViewBag.adiniz
+</p>
+<form method="post" class="form-group">
+    <div>
+        @Html.LabelFor(x => x.Ad, "Ürün Adı")
+        @Html.TextBoxFor(x => x.Ad, new { @class = "form-control" })
+
+        @Html.LabelFor(x => x.Marka, "Marka")
+        @Html.TextBoxFor(x => x.Marka, new { @class = "form-control" })
+
+        <label>Kategori Seçiniz</label>
+        @Html.DropDownListFor(x => x.KategoriId, (List<SelectListItem>)ViewBag.dgr, new {@class="form-control"})
+
+        @Html.LabelFor(x => x.Fiyat, "Fiyat")
+        @Html.TextBoxFor(x => x.Fiyat, new { @class = "form-control" })
+
+        @Html.LabelFor(x => x.Stok, "Stok")
+        @Html.TextBoxFor(x => x.Stok, new { @class = "form-control" })
+    </div>
+    <div class="mt-4">
+        <button class="btn btn-info">Ürün Ekle</button>
+    </div>
+</form>

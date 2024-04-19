@@ -1,0 +1,30 @@
+﻿@model List<MVCStok.Models.Entity.Urunler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h4>Ürün Listesi</h4>
+
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>#</th>
+        <th>Ürün Adı</th>
+        <th>Ürün Marka</th>
+        <th>Ürün Kategori</th>
+        <th>Fiyat</th>
+        <th>Stok</th>
+    </tr>
+    @foreach (var urun in Model)
+    {
+        <tr>
+            <td>@urun.UrunId</td>
+            <td>@urun.Ad</td>
+            <td>@urun.Marka</td>
+            <td>@urun.Kategoriler.KategoriAd</td>
+            <td>@urun.Fiyat</td>
+            <td>@urun.Stok</td>
+        </tr>
+    }
+</table>
+<a href="/Urun/UrunEkle/" class="btn btn-primary">Yeni Ürün Ekle</a>
